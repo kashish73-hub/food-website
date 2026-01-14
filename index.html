@@ -2,40 +2,218 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Food Fiesta</title>
+    <title>Food Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
+
+        body {
+            background-color: #fffaf5;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(to right, #ff512f, #f09819);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 5px;
+        }
+
+        /* NAVBAR */
+        nav {
+            background-color: #222;
+            text-align: center;
+            padding: 12px 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #f09819;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #ffe6cc;
+        }
+
+        .hero h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* MENU */
+        .menu {
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .menu h2 {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card {
+            background: #fff8f0;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: #ff512f;
+            font-weight: bold;
+        }
+
+        /* ABOUT */
+        .about {
+            padding: 50px 20px;
+            background-color: #ffe6cc;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        /* CONTACT */
+        .contact {
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            font-size: 17px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-    <h1>🍽 Food Fiesta</h1>
-    <p>Where Taste Meets Happiness</p>
-</header>
+    <header>
+        <h1>Foodie's Hub 🍕</h1>
+        <p>Delicious Food | Fresh Taste | Fast Service</p>
+    </header>
 
-<section class="hero">
-    <h2>Delicious Food, Happy Life</h2>
-    <p>Fresh • Tasty • Healthy</p>
-    <button onclick="showMenu()">Explore Menu</button>
-</section>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
 
-<section id="menu" class="menu-section">
-    <h2>Our Special Menu</h2>
-    <div id="menuItems" class="menu"></div>
-</section>
+    <section class="hero">
+        <h2>Welcome to Foodie's Hub</h2>
+        <p>
+            We serve mouth-watering dishes prepared with love and fresh ingredients.
+            Experience the perfect blend of taste and quality.
+        </p>
+    </section>
 
-<section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Your Email">
-    <button onclick="submitForm()">Send Message</button>
-</section>
+    <section class="menu">
+        <h2>Our Popular Menu</h2>
+        <div class="menu-items">
+            <div class="card">
+                <h3>Cheese Pizza</h3>
+                <p class="price">₹199</p>
+            </div>
+            <div class="card">
+                <h3>Burger Combo</h3>
+                <p class="price">₹149</p>
+            </div>
+            <div class="card">
+                <h3>Pasta Alfredo</h3>
+                <p class="price">₹179</p>
+            </div>
+            <div class="card">
+                <h3>French Fries</h3>
+                <p class="price">₹99</p>
+            </div>
+        </div>
+    </section>
 
-<footer>
-    <p>© 2026 Food Fiesta | Made with ❤️</p>
-</footer>
+    <section class="about">
+        <h2>About Us</h2>
+        <p>
+            Foodie's Hub is committed to delivering high-quality food with great taste.
+            Our chefs focus on hygiene, freshness, and customer satisfaction.
+        </p>
+    </section>
 
-<script src="script.js"></script>
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: foodieshub@email.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Location: India</p>
+    </section>
+
+    <footer>
+        © 2026 Foodie's Hub | Designed for Azure Deployment
+    </footer>
+
 </body>
 </html>
